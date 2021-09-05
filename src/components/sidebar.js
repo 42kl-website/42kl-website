@@ -91,7 +91,7 @@ const SidebarLinks = styled.nav`
 `;
 
 const Socials = styled.div`
-  padding: 0px 48px 24px 40px;
+  padding: 0px 48px 24px 48px;
 
   a {
     margin-left: 8px;
