@@ -38,11 +38,12 @@ const MenuIcon = styled.button`
     width: 28px;
     height: 3px;
     background: white;
-    transform-origin: 30px;
+    transform-origin: -2px;
     position: relative;
+    transition: opacity 300ms, transform 300ms;
 
     :first-child {
-      transform: ${({ sidebar }) => (sidebar ? "rotate(-45deg)" : "rotate(0)")};
+      transform: ${({ sidebar }) => (sidebar ? "rotate(45deg)" : "rotate(0)")};
     }
 
     :nth-child(2) {
@@ -50,24 +51,28 @@ const MenuIcon = styled.button`
     }
 
     :nth-child(3) {
-      transform: ${({ sidebar }) => (sidebar ? "rotate(45deg)" : "rotate(0)")};
+      transform: ${({ sidebar }) => (sidebar ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
 `;
 
 const SidebarLinks = styled.nav`
   position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: right;
   background: #00babc80;
-  top: 0rem;
-  height: 100vh;
-  padding: 120px 48px 0px 0px;
   transition: transform 300ms;
   transform: ${({ sidebar }) =>
     sidebar ? "translateX(0)" : "translateX(100%)"};
   ul {
     list-style: none;
-    margin-top: 0;
+    margin: 0;
+    padding: 120px 48px 0px 48px;
   }
   li {
     padding: 16px 0px;
@@ -86,6 +91,8 @@ const SidebarLinks = styled.nav`
 `;
 
 const Socials = styled.div`
+  padding: 0px 48px 24px 40px;
+
   a {
     margin-left: 8px;
   }
