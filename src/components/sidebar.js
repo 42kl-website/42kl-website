@@ -36,7 +36,7 @@ const MenuIcon = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: flex-end;
+  align-items: center;
   width: 48px;
   height: 36px;
   background: transparent;
