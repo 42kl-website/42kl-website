@@ -8,28 +8,31 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { IconContext } from "@react-icons/all-files/lib";
 
 // style
-const Container = styled.div`
-  /* position: fixed; */
-  /* right: 0px; */
-  /* height: 100vh; */
-  /* padding: 48px 64px 42px 0px; */
-
-  button {
-    /* margin-left: auto; */
-  }
+const Menu = styled.div`
+  position: fixed;
+  top: 4%;
+  right: 2%;
+  display: flex;
+  z-index: 5;
 `;
 
 const ApplyBtn = styled((props) => <Link {...props} />)`
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom right, #00babc, #3d5aae);
+  margin-right: 85px;
+  padding: 8px 16px;
+  border-radius: 28px;
   color: #fff;
-  border-style: solid;
-  background: red;
-  padding: 32px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  opacity: ${({ sidebar }) => (sidebar ? "0" : "1")};
+  pointer-events: ${({ sidebar }) => (sidebar ? "none" : "auto")};
+  z-index: -1;
 `;
 
 const MenuIcon = styled.button`
-  position: fixed;
-  top: 48px;
-  right: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -39,7 +42,6 @@ const MenuIcon = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 5;
 
   div {
     width: 28px;
@@ -76,12 +78,11 @@ const SidebarLinks = styled.nav`
   transition: transform 300ms;
   transform: ${({ sidebar }) =>
     sidebar ? "translateX(0)" : "translateX(100%)"};
+  z-index: 1;
   ul {
     list-style: none;
     margin: 0;
     padding: 120px 48px 0px 48px;
-  }
-  li {
   }
   a {
     color: #fff;
@@ -155,13 +156,17 @@ const Sidebar = () => {
   const [sidebar, showSidebar] = useState(false);
   return (
     <IconContext.Provider value={{ color: "fff", size: "32px" }}>
-      <Container>
-        <ApplyBtn to="#">Apply Now</ApplyBtn>
-        <MenuIcon sidebar={sidebar} onClick={() => showSidebar(!sidebar)}>
-          <div />
-          <div />
-          <div />
-        </MenuIcon>
+      <>
+        <Menu>
+          <ApplyBtn to="#" sidebar={sidebar}>
+            APPLY NOW
+          </ApplyBtn>
+          <MenuIcon sidebar={sidebar} onClick={() => showSidebar(!sidebar)}>
+            <div />
+            <div />
+            <div />
+          </MenuIcon>
+        </Menu>
         <SidebarLinks sidebar={sidebar}>
           <ul>
             {links.map((page, i) => (
@@ -182,7 +187,7 @@ const Sidebar = () => {
             </Link>
           </Socials>
         </SidebarLinks>
-      </Container>
+      </>
     </IconContext.Provider>
   );
 };
