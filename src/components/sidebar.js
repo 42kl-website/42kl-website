@@ -19,6 +19,13 @@ const Container = styled.div`
   }
 `;
 
+const ApplyBtn = styled((props) => <Link {...props} />)`
+  color: #fff;
+  border-style: solid;
+  background: red;
+  padding: 32px;
+`;
+
 const MenuIcon = styled.button`
   position: fixed;
   top: 48px;
@@ -75,7 +82,6 @@ const SidebarLinks = styled.nav`
     padding: 120px 48px 0px 48px;
   }
   li {
-    padding: 16px 0px;
   }
   a {
     color: #fff;
@@ -83,6 +89,8 @@ const SidebarLinks = styled.nav`
     font-size: 24px;
     font-weight: 600;
     transition: color 100ms;
+    padding: 16px 0px;
+    display: block;
 
     :hover {
       color: black;
@@ -95,6 +103,7 @@ const Socials = styled.div`
 
   a {
     margin-left: 8px;
+    display: inline;
   }
 `;
 
@@ -147,6 +156,7 @@ const Sidebar = () => {
   return (
     <IconContext.Provider value={{ color: "fff", size: "32px" }}>
       <Container>
+        <ApplyBtn to="#">Apply Now</ApplyBtn>
         <MenuIcon sidebar={sidebar} onClick={() => showSidebar(!sidebar)}>
           <div />
           <div />
