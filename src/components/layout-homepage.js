@@ -15,12 +15,20 @@ const Global = createGlobalStyle`
   }
 `;
 
+const Children = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+`;
+
 const LayoutHomePage = ({ children }) => {
   return (
     <div>
       <Global />
       <Sidebar />
-      <main>{children}</main>
+      <Children>{children}</Children>
     </div>
   );
 };
