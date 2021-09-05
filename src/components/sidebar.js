@@ -124,31 +124,31 @@ const links = [
   },
   {
     title: "How to Apply",
-    link: "/",
+    link: "#",
   },
   {
     title: "Is this for you?",
-    link: "/",
+    link: "#",
   },
   {
     title: "Community",
-    link: "/",
+    link: "#",
   },
   {
     title: "F.A.Q",
-    link: "/",
+    link: "#",
   },
   {
     title: "For Investors",
-    link: "/",
+    link: "#",
   },
   {
     title: "Contact",
-    link: "/",
+    link: "#",
   },
   {
     title: "Apply Now",
-    link: "/",
+    link: "#",
   },
 ];
 
