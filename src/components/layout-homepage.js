@@ -1,6 +1,6 @@
 import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import Sidebar from "./sidebar";
+import Navbar from "./navbar";
 
 //styles
 const Global = createGlobalStyle`
@@ -27,7 +27,7 @@ const LayoutHomePage = ({ children }) => {
   return (
     <div>
       <Global />
-      <Sidebar />
+      <Navbar />
       <Children>{children}</Children>
     </div>
   );

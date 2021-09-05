@@ -2,13 +2,14 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { useState } from "react";
+import SchoolLogo from "../images/logo-white.png";
 import { FaFacebook } from "@react-icons/all-files/fa/FaFaceBook";
 import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
 import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { IconContext } from "@react-icons/all-files/lib";
 
 // style
-const Menu = styled.div`
+const NavbarMenu = styled.div`
   position: fixed;
   top: 4%;
   right: 2%;
@@ -16,6 +17,13 @@ const Menu = styled.div`
   z-index: 5;
 `;
 
+const Logo = styled((props) => <Link {...props} />)`
+  position: fixed;
+  left: 2%;
+  img {
+    width: 128px;
+  }
+`;
 const ApplyBtn = styled((props) => <Link {...props} />)`
   display: flex;
   align-items: center;
@@ -32,7 +40,7 @@ const ApplyBtn = styled((props) => <Link {...props} />)`
   z-index: -1;
 `;
 
-const MenuIcon = styled.button`
+const SidebarIcon = styled.button`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -152,21 +160,24 @@ const links = [
   },
 ];
 
-const Sidebar = () => {
+const Navbar = () => {
   const [sidebar, showSidebar] = useState(false);
   return (
     <IconContext.Provider value={{ color: "fff", size: "32px" }}>
       <>
-        <Menu>
+        <NavbarMenu>
+          <Logo to="/">
+            <img src={SchoolLogo} alt="42KL logo" />
+          </Logo>
           <ApplyBtn to="#" sidebar={sidebar}>
             APPLY NOW
           </ApplyBtn>
-          <MenuIcon sidebar={sidebar} onClick={() => showSidebar(!sidebar)}>
+          <SidebarIcon sidebar={sidebar} onClick={() => showSidebar(!sidebar)}>
             <div />
             <div />
             <div />
-          </MenuIcon>
-        </Menu>
+          </SidebarIcon>
+        </NavbarMenu>
         <SidebarLinks sidebar={sidebar}>
           <ul>
             {links.map((page, i) => (
@@ -192,4 +203,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default Navbar;
