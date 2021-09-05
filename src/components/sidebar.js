@@ -1,4 +1,5 @@
 import * as React from "react";
+import styled from "styled-components";
 import { Link } from "gatsby";
 import { useState } from "react";
 import { FaBars } from "@react-icons/all-files/fa/FaBars";
@@ -8,34 +9,41 @@ import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
 import { IconContext } from "@react-icons/all-files/lib";
 // import * as AiIcons from "react-icons/ai";
 
-//style
-const container = {
-  position: "fixed",
-  right: "0px",
-  background: "#00BABC",
-  height: "100%",
-  padding: "48px 64px 42px 0px",
-  textAlign: "right",
-};
+// style
+const Container = styled.div`
+  position: fixed;
+  right: 0px;
+  background: #00babc;
+  height: 100vh;
+  padding: 48px 64px 42px 0px;
+  text-align: right;
+`;
 
-const navLinkItem = {
-  margin: "32px 0px",
-};
+const SidebarLinks = styled.nav`
+  ul {
+    list-style: none;
+  }
+  li {
+    margin: 32px 0px;
+  }
+  a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 600;
+    transition: color 100ms;
 
-const navLinkText = {
-  color: "#fff",
-  textDecoration: "none",
-  fontSize: "24px",
-  fontWeight: "600",
+    :hover {
+      color: pink;
+    }
+  }
+`;
 
-  //   &:hover {
-  // 	  color: "pink",
-  //   }
-};
-
-const icon = {
-  marginLeft: "8px",
-};
+const Socials = styled.div`
+  a {
+    margin-left: 8px;
+  }
+`;
 
 // const sidebarMenuActive = {
 //   marginLeft: "20px",
@@ -94,35 +102,33 @@ const Sidebar = () => {
   //   const showSidebar = () => setSidebar(!sidebar);
   return (
     <IconContext.Provider value={{ color: "fff", size: "32px" }}>
-      <div style={container}>
+      <Container>
         <Link to="#">
           {/* <FaBars onClick={showSidebar} /> */}
           <FaBars />
         </Link>
         {/* <nav style={sidebar ? "sidebarMenuActive" : "sidebarMenu"}> */}
-        <nav>
-          <ul style={{ listStyle: "none" }}>
+        <SidebarLinks>
+          <ul>
             {links.map((page, i) => (
-              <li key={i} style={navLinkItem}>
-                <Link to={page.link} style={navLinkText}>
-                  &lt;/{page.title}&gt;
-                </Link>
+              <li key={i}>
+                <Link to={page.link}>&lt;/{page.title}&gt;</Link>
               </li>
             ))}
           </ul>
-        </nav>
-        <div>
-          <Link to="#" style={icon}>
+        </SidebarLinks>
+        <Socials>
+          <Link to="#">
             <FaFacebook />
           </Link>
-          <Link to="#" style={icon}>
+          <Link to="#">
             <FaInstagram />
           </Link>
-          <Link to="#" style={icon}>
+          <Link to="#">
             <FaTwitter />
           </Link>
-        </div>
-      </div>
+        </Socials>
+      </Container>
     </IconContext.Provider>
   );
 };
