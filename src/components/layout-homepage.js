@@ -16,11 +16,11 @@ const Global = createGlobalStyle`
 `;
 
 const Children = styled.main`
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
+  width: 100%; */
 `;
 
 const LayoutHomePage = ({ children }) => {
