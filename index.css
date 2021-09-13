@@ -3,3 +3,7 @@
 .background {
   position: relative;
 }
+
+.alignment {
+	text-align: center;
+}
