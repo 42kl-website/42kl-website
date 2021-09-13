@@ -43,6 +43,22 @@ const Beliefs = styled.div`
   /* position: absolute; */
 `;
 
+const Skills = styled.div`
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* position: absolute; */
+  h2 {
+    font-size: 120px;
+  }
+  p {
+    width: 480px;
+    font-size: 40px;
+  }
+`;
+
 //markup
 const IndexPage = () => {
   return (
@@ -101,7 +117,54 @@ const IndexPage = () => {
           />
         </Beliefs>
       </Introduction>
+		  <Skills>
+			  <div>
+				  <h2>Tech Skills</h2>
+				  <p><Highlight>Blockchain</Highlight></p>
+				  <p><Highlight>Cyber Security</Highlight></p>
+				  <p><Highlight>Cloud Computing</Highlight></p>
+				  <p><Highlight>Data Science</Highlight></p>
+				  <p><Highlight>Machine Learning</Highlight></p>
+				  <p><Highlight>Artificial Intelligence</Highlight></p>
+				  <p><Highlight>Front-end Design</Highlight></p>
+			  </div>
+			  <StaticImage
+				  src="../images/skills-tech.png"
+				  width={850}
+			  />
+		  </Skills>
+		  <Skills className="alignment">
+			  <StaticImage
+				  src="../images/skills-soft.png"
+				  width={700}
+			  />
+			   <div style={{ padding: `10em` }}>
+				  <h2>Soft Skills</h2>
+				  <p><Highlight>Behavioral</Highlight></p>
+				  <p><Highlight>Mindset</Highlight></p>
+				  <p><Highlight>Attitude</Highlight></p>
+				  <p><Highlight>Teamwork</Highlight></p>
+				  <p><Highlight>Leadership</Highlight></p>
+				  <p><Highlight>Learnability</Highlight></p>
+			  </div>
+		  </Skills>
+		  <Skills>
+			  <div style={{ padding: `10em`}}>
+				  <h2>Right Fit</h2>
+				  <p><Highlight>Site Visits</Highlight></p>
+				  <p><Highlight>Work Simulations</Highlight></p>
+				  <p><Highlight>Company Assessment</Highlight></p>
+				  <p><Highlight>Hackathons</Highlight></p>
+				  <p><Highlight>Informal Meetings</Highlight></p>
+				  <p><Highlight>Industry Challenges</Highlight></p>
+			  </div>
+			  <StaticImage
+				  src="../images/skills-right-fit.png"
+				  width={700}
+			  />
+		  </Skills>
     </LayoutHomePage>
+
   );
 };
 
