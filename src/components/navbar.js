@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { useState } from "react";
 import SchoolLogo from "../images/logo-white.png";
-// import { FaFacebook } from "@react-icons/all-files/fa/FaFaceBook";
-// import { FaInstagram } from "@react-icons/all-files/fa/FaInstagram";
-// import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter";
-import { IconContext } from "@react-icons/all-files/lib";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 // style
 const NavbarMenu = styled.div`
@@ -187,7 +187,7 @@ const Navbar = () => {
             ))}
           </ul>
           <Socials>
-            {/* <Link to="#">
+            <Link to="#">
               <FaFacebook />
             </Link>
             <Link to="#">
@@ -195,7 +195,7 @@ const Navbar = () => {
             </Link>
             <Link to="#">
               <FaTwitter />
-            </Link> */}
+            </Link>
           </Socials>
         </SidebarLinks>
       </>
