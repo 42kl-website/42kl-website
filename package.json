@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "react-icons": "^4.1.0",
+    "@plasmicapp/host": "0.0.22",
     "@plasmicapp/loader-gatsby": "^1.0.16",
+    "@plasmicapp/react-web": "^0.2.79",
     "babel-plugin-styled-components": "^1.13.2",
     "gatsby": "^3.13.0",
     "gatsby-plugin-gatsby-cloud": "^3.1.0",
@@ -27,6 +29,10 @@
     "gatsby-transformer-sharp": "^3.13.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
     "styled-components": "^5.3.1"
+  },
+  "devDependencies": {
+    "@types/react-helmet": "^6.1.2"
   }
 }
