@@ -22,7 +22,7 @@ module.exports = {
             token: process.env.PLASMIC_TOKEN
           },
         ],
-        defaultPlasmicPage: require.resolve('./src/templates/default.tsx'),
+        // defaultPlasmicPage: require.resolve('./src/templates/default.tsx'),
         // Fetches the latest revisions, whether or not they were unpublished!
         // Disable for production to ensure you render only published changes.
         preview: true
