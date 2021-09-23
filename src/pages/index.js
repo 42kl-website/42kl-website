@@ -2,7 +2,7 @@ import * as React from "react";
 import LayoutHomePage from "../components/layout-homepage";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Section, Highlight, BigHighlight } from "../style/common-styles";
+import { Section, Highlight } from "../style/common-styles";
 import "../style/index.css";
 
 /*
@@ -32,7 +32,7 @@ const Introduction = styled(Section)`
 `;
 
 const Beliefs = styled.div`
-  /* position: absolute; */
+
 `;
 
 const Skills = styled(Section)`
@@ -42,6 +42,7 @@ const Skills = styled(Section)`
   p {
     width: 480px;
     font-size: 40px;
+    line-height: 1.8;
   }
 `;
 
@@ -103,15 +104,6 @@ const IndexPage = () => {
           />
         </Beliefs>
       </Introduction>
-      <Section>
-        <div style={{ position: "absolute", left: "10%" }}>
-          <BigHighlight>
-            &lt;/WORLD<br />
-            READY<br />
-            TALENT&gt;
-          </BigHighlight>
-        </div>
-      </Section>
       <Skills>
         <div>
           <h2>Tech Skills</h2>
@@ -132,21 +124,11 @@ const IndexPage = () => {
         <div style={{ padding: `10em` }}>
           <h2>Soft Skills</h2>
           <p>
-            <Highlight>Behavioral</Highlight>
-          </p>
-          <p>
-            <Highlight>Mindset</Highlight>
-          </p>
-          <p>
-            <Highlight>Attitude</Highlight>
-          </p>
-          <p>
-            <Highlight>Teamwork</Highlight>
-          </p>
-          <p>
-            <Highlight>Leadership</Highlight>
-          </p>
-          <p>
+            <Highlight>Behavioral</Highlight><br />
+            <Highlight>Mindset</Highlight><br />
+            <Highlight>Attitude</Highlight><br />
+            <Highlight>Teamwork</Highlight><br />
+            <Highlight>Leadership</Highlight><br />
             <Highlight>Learnability</Highlight>
           </p>
         </div>
@@ -155,21 +137,11 @@ const IndexPage = () => {
         <div style={{ padding: `10em` }}>
           <h2>Right Fit</h2>
           <p>
-            <Highlight>Site Visits</Highlight>
-          </p>
-          <p>
-            <Highlight>Work Simulations</Highlight>
-          </p>
-          <p>
-            <Highlight>Company Assessment</Highlight>
-          </p>
-          <p>
-            <Highlight>Hackathons</Highlight>
-          </p>
-          <p>
-            <Highlight>Informal Meetings</Highlight>
-          </p>
-          <p>
+            <Highlight>Site Visits</Highlight><br />
+            <Highlight>Work Simulations</Highlight><br />
+            <Highlight>Company Assessment</Highlight><br />
+            <Highlight>Hackathons</Highlight><br />
+            <Highlight>Informal Meetings</Highlight><br />
             <Highlight>Industry Challenges</Highlight>
           </p>
         </div>
