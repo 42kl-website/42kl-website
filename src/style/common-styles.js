@@ -15,6 +15,8 @@ export const Section = styled.div`
 export const Highlight = styled.span`
   font-weight: bold;
   background: -webkit-linear-gradient(45deg, #3d5aae, #00babc);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: white;
 `;
