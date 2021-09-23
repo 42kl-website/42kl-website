@@ -2,7 +2,7 @@ import * as React from "react";
 import LayoutHomePage from "../components/layout-homepage";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Section, Highlight } from "../style/common-styles";
+import { Section, Highlight, BigHighlight } from "../style/common-styles";
 import "../style/index.css";
 
 /*
@@ -32,7 +32,9 @@ const Introduction = styled(Section)`
 `;
 
 const Beliefs = styled.div`
-
+  height: 60%;
+  width: 40%;
+  /* display: inline; */
 `;
 
 const Skills = styled(Section)`
@@ -81,29 +83,44 @@ const IndexPage = () => {
             src="../images/beliefs-community.png"
             alt="Belief in commitment to community"
             width={200}
+            style={{top:"10px", left:"10px"}}
           />
           <StaticImage
             src="../images/beliefs-creativity.png"
             alt="Belief in creativity and passion"
             width={200}
-          />
+            style={{top:"40px", left:"170px"}}
+          /><br />
           <StaticImage
             src="../images/beliefs-equal-opportunities.png"
             alt="Belief in equal opportunities"
             width={200}
+            style={{top:"20px", left:"180px"}}
           />
+          <br />
           <StaticImage
             src="../images/beliefs-excellence.png"
             alt="Belief in pursuit of excellence"
             width={200}
+            style={{top:"40px", left:"50px"}}
           />
           <StaticImage
             src="../images/beliefs-innovative.png"
             alt="Belief in innovative and questioning"
             width={200}
+            style={{top:"40px", left:"150px"}}            
           />
         </Beliefs>
       </Introduction>
+      <Section>
+        <div style={{ position: "absolute", left: "10%" }}>
+          <BigHighlight>
+            &lt;/WORLD<br />
+            READY<br />
+            TALENT&gt;
+          </BigHighlight>
+        </div>
+      </Section>
       <Skills>
         <div>
           <h2>Tech Skills</h2>
