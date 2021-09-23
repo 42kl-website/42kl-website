@@ -10,6 +10,7 @@ import { IconContext } from "react-icons";
 
 /*
  ** Sticky Navbar/Header for the home page
+ ** Used in layout-homepage.js
  ** Contains: 42KL logo, Apply Now Button, Sidebar Menu (hamburger menu)
  ** Sidebar referenced from https://www.youtube.com/watch?v=CXa0f4-dWi4&ab_channel=BrianDesign
  */

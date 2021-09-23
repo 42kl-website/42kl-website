@@ -2,7 +2,13 @@ import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Navbar from "./navbar";
 
-//styles
+/*
+ ** Main layout for the homepage
+ ** Used in index.js (may need to be updated)
+ ** Styled to remove default page spacing
+ */
+
+/* styles */
 const Global = createGlobalStyle`
   body {
     width: 100%;
