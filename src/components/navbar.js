@@ -8,7 +8,14 @@ import { FaInstagram } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
-// style
+/*
+ ** Sticky Navbar/Header for the main page
+ ** Contains: 42KL logo, Apply Now Button, Sidebar Menu (hamburger menu)
+ ** Sidebar referenced from https://www.youtube.com/watch?v=CXa0f4-dWi4&ab_channel=BrianDesign
+ */
+
+/* style */
+//Container for Navbar items (excluding <SidebarLinks>)
 const NavbarMenu = styled.div`
   position: fixed;
   top: 4%;
@@ -73,6 +80,7 @@ const SidebarIcon = styled.button`
   }
 `;
 
+// Displays when Sidebar icon is clicked
 const SidebarLinks = styled.nav`
   position: fixed;
   top: 0;
