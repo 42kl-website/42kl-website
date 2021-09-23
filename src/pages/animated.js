@@ -5,7 +5,6 @@ import {
   initPlasmicLoader,
 } from "@plasmicapp/loader-gatsby";
 import { graphql } from 'gatsby';
-import Meteor42 from '../components/Meteor42';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -21,13 +20,6 @@ export const query = graphql`
 // Render the page or component from Plasmic.
 const Animated = ({ data }) => {
   const { plasmicComponents, plasmicOptions } = data;
-  const PLASMIC = initPlasmicLoader(plasmicOptions);
-  PLASMIC.registerComponent(Meteor42, {
-    name: 'Meteor42',
-    props: {
-      width: 'string',
-    }
-  })
 
   gsap.registerPlugin(ScrollTrigger)
   const ref = useRef(null)
@@ -51,7 +43,7 @@ const Animated = ({ data }) => {
 
   return (
     <PlasmicRootProvider
-      loader={PLASMIC}
+      loader={initPlasmicLoader(plasmicOptions)}
       prefetchedData={plasmicComponents}
     >
       <PlasmicComponent
