@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
+  flex-direction: ${ props => props.direction || "column" };
   height: 100vh;
   width: 100%;
   margin: 16px;
