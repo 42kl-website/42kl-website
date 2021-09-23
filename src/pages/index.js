@@ -26,8 +26,8 @@ const Introduction = styled(Section)`
     font-size: 80px;
   }
   p {
-    width: 480px;
-    font-size: larger;
+    width: 500px;
+    font-size: 1.5em;
   }
 `;
 
@@ -47,6 +47,10 @@ const Skills = styled(Section)`
     line-height: 1.8;
   }
 `;
+
+// const Zero = styled.div`
+
+// `;
 
 //markup
 const IndexPage = () => {
@@ -112,6 +116,13 @@ const IndexPage = () => {
           />
         </Beliefs>
       </Introduction>
+      <Section>
+        <div>
+          <BigHighlight fontSize="13em">
+            &lt;/ZERO&gt;
+          </BigHighlight>
+        </div>
+      </Section>
       <Section>
         <div style={{ position: "absolute", left: "10%" }}>
           <BigHighlight>
