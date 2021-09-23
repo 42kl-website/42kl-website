@@ -2,7 +2,7 @@ import * as React from "react";
 import LayoutHomePage from "../components/layout-homepage";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Section, Highlight } from "../style/common-styles";
+import { Section, Highlight, BigHighlight } from "../style/common-styles";
 import "../style/index.css";
 
 /*
@@ -103,28 +103,25 @@ const IndexPage = () => {
           />
         </Beliefs>
       </Introduction>
+      <Section>
+        <div style={{ position: "absolute", left: "10%" }}>
+          <BigHighlight>
+            &lt;/WORLD<br />
+            READY<br />
+            TALENT&gt;
+          </BigHighlight>
+        </div>
+      </Section>
       <Skills>
         <div>
           <h2>Tech Skills</h2>
           <p>
-            <Highlight>Blockchain</Highlight>
-          </p>
-          <p>
-            <Highlight>Cyber Security</Highlight>
-          </p>
-          <p>
-            <Highlight>Cloud Computing</Highlight>
-          </p>
-          <p>
-            <Highlight>Data Science</Highlight>
-          </p>
-          <p>
-            <Highlight>Machine Learning</Highlight>
-          </p>
-          <p>
-            <Highlight>Artificial Intelligence</Highlight>
-          </p>
-          <p>
+            <Highlight>Blockchain</Highlight><br />
+            <Highlight>Cyber Security</Highlight><br />
+            <Highlight>Cloud Computing</Highlight><br />
+            <Highlight>Data Science</Highlight><br />
+            <Highlight>Machine Learning</Highlight><br />
+            <Highlight>Artificial Intelligence</Highlight><br />
             <Highlight>Front-end Design</Highlight>
           </p>
         </div>
