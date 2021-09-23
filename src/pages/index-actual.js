@@ -78,7 +78,12 @@ const Main = () => {
           </defs>
         </svg>
         <div style={{ clipPath: "url(#clipping)" }}>
-          <img src={Meteor} width="1000" height="700" />
+          <img
+            src={Meteor}
+            alt="Meteor shower background"
+            width="1000"
+            height="700"
+          />
         </div>
         <Description>
           <h1>
