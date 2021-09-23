@@ -1,5 +1,11 @@
-/* just for StaticImage styling */
+/* 
+** for StaticImage styling
+*/
 
 .background {
-	position: relative;
-  }
+  position: relative;
+}
+
+.alignment {
+  text-align: center;
+}
