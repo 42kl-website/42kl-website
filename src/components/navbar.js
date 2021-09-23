@@ -9,7 +9,7 @@ import { FaTwitter } from "react-icons/fa";
 import { IconContext } from "react-icons";
 
 /*
- ** Sticky Navbar/Header for the main page
+ ** Sticky Navbar/Header for the home page
  ** Contains: 42KL logo, Apply Now Button, Sidebar Menu (hamburger menu)
  ** Sidebar referenced from https://www.youtube.com/watch?v=CXa0f4-dWi4&ab_channel=BrianDesign
  */
