@@ -9,6 +9,8 @@ import Navbar from "./navbar";
  */
 
 /* styles */
+//NOTE: MIGHT WANT TO REFACTOR THIS
+//To create a fullscreen black webpage
 const Global = createGlobalStyle`
   body {
     width: 100%;
