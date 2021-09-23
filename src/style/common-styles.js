@@ -12,7 +12,7 @@ export const Section = styled.div`
   margin: 16px;
   align-items: center;
   justify-content: center;
-  padding-bottom: 24px;
+  padding-bottom: 60px;
 `;
 
 export const Highlight = styled.span`
