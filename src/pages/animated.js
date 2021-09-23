@@ -26,14 +26,27 @@ const Animated = ({ data }) => {
   useEffect(() => {
     if (ref.current) {
       const element = ref.current;
+      gsap
+        .to(element.querySelector('.forty-two'),
+          {
+            scale: 6,
+            scrollTrigger: {
+              trigger: element.querySelector('.frame-140'),
+              start: "top bottom",
+              end: "+=300",
+              scrub: true,
+            }
+          }
+        )
+
       gsap.to(
         element.querySelector('.forty-two'),
         {
-          scale: 6,
+          opacity: 0,
           scrollTrigger: {
             trigger: element.querySelector('.frame-140'),
-            start: "top bottom",
-            end: "+=300",
+            start: "299 bottom",
+            end: "+=1",
             scrub: true,
           }
         }
