@@ -26,15 +26,17 @@ const Introduction = styled(Section)`
     font-size: 80px;
   }
   p {
+    padding-left: 40px;
     width: 500px;
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 `;
 
 const Beliefs = styled.div`
-  height: 60%;
-  width: 40%;
-  /* display: inline; */
+  position: relative;
+  height: 70%;
+  width: 420px;
+  margin: auto 40px;
 `;
 
 const Skills = styled(Section)`
@@ -42,8 +44,8 @@ const Skills = styled(Section)`
     font-size: 120px;
   }
   p {
-    width: 480px;
-    font-size: 40px;
+    width: auto;
+    font-size: 2.2em;
     line-height: 1.8;
   }
 `;
@@ -80,7 +82,7 @@ const IndexPage = () => {
         <h1>42 Kuala Lumpur&gt;</h1>
       </WelcomeText>
       <Introduction>
-        <div>
+        <div style={{marginRight:"60px"}}>
           <h2>42KL</h2>
           <p>
             42 KL offers an{" "}
@@ -100,33 +102,32 @@ const IndexPage = () => {
           <StaticImage
             src="../images/beliefs-community.png"
             alt="Belief in commitment to community"
-            width={200}
-            style={{ top: "10px", left: "10px" }}
+            width={150}
           />
           <StaticImage
             src="../images/beliefs-creativity.png"
             alt="Belief in creativity and passion"
-            width={200}
-            style={{ top: "40px", left: "170px" }}
-          /><br />
+            width={150}
+            style={{ position: "absolute", top:"10%", right: "0px" }}
+          />
           <StaticImage
             src="../images/beliefs-equal-opportunities.png"
             alt="Belief in equal opportunities"
-            width={200}
-            style={{ top: "20px", left: "180px" }}
+            width={150}
+            style={{ position: "absolute", top:"35%", left:"30%"}}
           />
-          <br />
           <StaticImage
             src="../images/beliefs-excellence.png"
             alt="Belief in pursuit of excellence"
-            width={200}
-            style={{ top: "40px", left: "50px" }}
+            width={150}
+            style={{ position: "absolute", bottom:"0px", right: "0px" }}
           />
           <StaticImage
             src="../images/beliefs-innovative.png"
             alt="Belief in innovative and questioning"
-            width={200}
-            style={{ top: "40px", left: "150px" }}
+            width={120}
+            style={{ position: "absolute", bottom:"10%", left:"0px" }}
+
           />
         </Beliefs>
       </Introduction>
