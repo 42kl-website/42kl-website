@@ -199,6 +199,13 @@ const IndexPage = () => {
             &lt;/OUR NETWORK&gt;
           </BigHighlight>
       </Section>
+      <Section>
+      <StaticImage
+            src="../images/Earth.svg"
+            alt="Earth"
+            width={1100}
+      />
+      </Section>
     </LayoutHomePage>
   );
 };
