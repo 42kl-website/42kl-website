@@ -4,15 +4,18 @@ import styled from "styled-components";
  ** Commonly used styles
  */
 
+//Vertically: Aligned to center
+//Horizontally: flexed and aligned with space-between + Left/Right padding
 export const Section = styled.div`
   display: flex;
-  flex-direction: ${(props) => props.direction || "row"};
+  flex-direction: ${(props) => props.direction || "row"}; //"Passed Props"
   height: 100vh;
   /* width: 100%; */
   margin: 16px;
   align-items: center;
-  justify-content: center;
-  padding-bottom: 60px;
+  justify-content: space-between;
+  padding: 0 10% 0 10%;
+  padding-bottom: 60px; //To give space between each Figma Frame
 `;
 
 export const Highlight = styled.span`
