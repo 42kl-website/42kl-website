@@ -21,6 +21,7 @@ const WelcomeText = styled.div`
   }
 `;
 
+//"Extending Styles"
 const Introduction = styled(Section)`
   h2 {
     font-size: 80px;
@@ -67,6 +68,22 @@ const Zero = styled.div`
   }
   #left {
     align-self: flex-end;
+  }
+`;
+
+const Learning = styled(Section)`
+  padding-top: 10%;
+  #context {
+    text-align: right;
+    width: 28vw;
+  }
+  h2 {
+    font-size: 3vw;
+    font-weight: bold;
+  }
+  p {
+    font-size: 1.5vw;
+    color: #00babc;
   }
 `;
 
@@ -144,6 +161,24 @@ const HomePage = () => {
           <p id="right">TEACHER</p>
         </Zero>
       </Section>
+      <Learning>
+        <StaticImage
+          src="../images/learning-project-based.png"
+          alt="Project based learning"
+          style={{ width: "38vw" }}
+        />
+        <div id="context">
+          <h2>
+            Project Based
+            <br />
+            Learning
+          </h2>
+          <p>
+            Imitates real-world work and encourages student to learn time
+            management and build conceptual frameworks.
+          </p>
+        </div>
+      </Learning>
       <Section>
         <div style={{ position: "absolute", left: "10%" }}>
           <BigHighlight>
