@@ -35,6 +35,7 @@ const Introduction = styled(Section)`
 const Beliefs = styled.div`
   position: relative;
   height: 70%;
+  min-width: 400px;
   width: 420px;
   margin: auto 40px;
 `;
