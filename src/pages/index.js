@@ -51,7 +51,7 @@ const GradientBtn = styled((props) => <Link {...props} />)`
   font-size: 32px;
 `;
 
-const Main = () => {
+const IndexPage = () => {
   return (
     <>
       <Global />
@@ -95,7 +95,7 @@ const Main = () => {
           </h1>
           <p>BEST EXPERIENCED ON COMPUTERS</p>
           <Options>
-            <GradientBtn to="#">STUDENT</GradientBtn>
+            <GradientBtn to="/home">STUDENT</GradientBtn>
             <GradientBtn to="#">INVESTOR</GradientBtn>
           </Options>
         </Description>
@@ -104,4 +104,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default IndexPage;
