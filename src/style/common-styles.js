@@ -6,11 +6,13 @@ import styled from "styled-components";
 
 export const Section = styled.div`
   display: flex;
+  flex-direction: ${ props => props.direction || "row" };
   height: 100vh;
   width: 100%;
   margin: 16px;
   align-items: center;
   justify-content: center;
+  padding-bottom: 60px;
 `;
 
 export const Highlight = styled.span`
