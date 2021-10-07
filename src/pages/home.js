@@ -67,7 +67,7 @@ const Zero = styled.div`
 `;
 
 //markup
-const IndexPage = () => {
+const HomePage = () => {
   return (
     <LayoutHomePage>
       <StaticImage
@@ -108,7 +108,8 @@ const IndexPage = () => {
             alt="Belief in creativity and passion"
             width={200}
             style={{ top: "40px", left: "170px" }}
-          /><br />
+          />
+          <br />
           <StaticImage
             src="../images/beliefs-equal-opportunities.png"
             alt="Belief in equal opportunities"
@@ -132,20 +133,22 @@ const IndexPage = () => {
       </Introduction>
       <Section direction="column">
         <Zero>
-          <p id="left">CLASSES</p><p id="right">REQUIREMENT</p>
+          <p id="left">CLASSES</p>
+          <p id="right">REQUIREMENT</p>
         </Zero>
-        <BigHighlight fontSize="13em">
-          &lt;/ZERO&gt;
-        </BigHighlight>
+        <BigHighlight fontSize="13em">&lt;/ZERO&gt;</BigHighlight>
         <Zero>
-          <p id="left">TUITION</p><p id="right">TEACHER</p>
+          <p id="left">TUITION</p>
+          <p id="right">TEACHER</p>
         </Zero>
       </Section>
       <Section>
         <div style={{ position: "absolute", left: "10%" }}>
           <BigHighlight>
-            &lt;/WORLD<br />
-            READY<br />
+            &lt;/WORLD
+            <br />
+            READY
+            <br />
             TALENT&gt;
           </BigHighlight>
         </div>
@@ -154,12 +157,18 @@ const IndexPage = () => {
         <div>
           <h2>Tech Skills</h2>
           <p>
-            <Highlight>Blockchain</Highlight><br />
-            <Highlight>Cyber Security</Highlight><br />
-            <Highlight>Cloud Computing</Highlight><br />
-            <Highlight>Data Science</Highlight><br />
-            <Highlight>Machine Learning</Highlight><br />
-            <Highlight>Artificial Intelligence</Highlight><br />
+            <Highlight>Blockchain</Highlight>
+            <br />
+            <Highlight>Cyber Security</Highlight>
+            <br />
+            <Highlight>Cloud Computing</Highlight>
+            <br />
+            <Highlight>Data Science</Highlight>
+            <br />
+            <Highlight>Machine Learning</Highlight>
+            <br />
+            <Highlight>Artificial Intelligence</Highlight>
+            <br />
             <Highlight>Front-end Design</Highlight>
           </p>
         </div>
@@ -170,11 +179,16 @@ const IndexPage = () => {
         <div style={{ padding: `10em` }}>
           <h2>Soft Skills</h2>
           <p>
-            <Highlight>Behavioral</Highlight><br />
-            <Highlight>Mindset</Highlight><br />
-            <Highlight>Attitude</Highlight><br />
-            <Highlight>Teamwork</Highlight><br />
-            <Highlight>Leadership</Highlight><br />
+            <Highlight>Behavioral</Highlight>
+            <br />
+            <Highlight>Mindset</Highlight>
+            <br />
+            <Highlight>Attitude</Highlight>
+            <br />
+            <Highlight>Teamwork</Highlight>
+            <br />
+            <Highlight>Leadership</Highlight>
+            <br />
             <Highlight>Learnability</Highlight>
           </p>
         </div>
@@ -183,23 +197,26 @@ const IndexPage = () => {
         <div style={{ padding: `10em` }}>
           <h2>Right Fit</h2>
           <p>
-            <Highlight>Site Visits</Highlight><br />
-            <Highlight>Work Simulations</Highlight><br />
-            <Highlight>Company Assessment</Highlight><br />
-            <Highlight>Hackathons</Highlight><br />
-            <Highlight>Informal Meetings</Highlight><br />
+            <Highlight>Site Visits</Highlight>
+            <br />
+            <Highlight>Work Simulations</Highlight>
+            <br />
+            <Highlight>Company Assessment</Highlight>
+            <br />
+            <Highlight>Hackathons</Highlight>
+            <br />
+            <Highlight>Informal Meetings</Highlight>
+            <br />
             <Highlight>Industry Challenges</Highlight>
           </p>
         </div>
         <StaticImage src="../images/skills-right-fit.png" width={700} />
       </Skills>
       <Section>
-          <BigHighlight>
-            &lt;/OUR NETWORK&gt;
-          </BigHighlight>
+        <BigHighlight>&lt;/OUR NETWORK&gt;</BigHighlight>
       </Section>
     </LayoutHomePage>
   );
 };
 
-export default IndexPage;
+export default HomePage;
