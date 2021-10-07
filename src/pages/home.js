@@ -41,6 +41,7 @@ const Beliefs = styled.div`
 `;
 
 const Skills = styled(Section)`
+text-align: ${props => props.alignment || "left"};
   h2 {
     font-size: 120px;
   }
@@ -175,7 +176,7 @@ const HomePage = () => {
         </div>
         <StaticImage src="../images/skills-tech.png" width={850} />
       </Skills>
-      <Skills className="alignment">
+      <Skills alignment="center">
         <StaticImage src="../images/skills-soft.png" width={700} />
         <div style={{ padding: `10em` }}>
           <h2>Soft Skills</h2>
