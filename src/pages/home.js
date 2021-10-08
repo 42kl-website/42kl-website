@@ -61,12 +61,16 @@ const Zero = styled.div`
 
 const Learning = styled(Section)`
   padding-top: 10%;
-  #context {
+  p {
+    color: #00babc;
+  }
+  #project-based {
     text-align: right;
     width: 28vw;
   }
-  p {
-    color: #00babc;
+  #peer-to-peer {
+    width: 26vw;
+    padding-top: 10%;
   }
 `;
 
@@ -174,7 +178,7 @@ const HomePage = () => {
           alt="Portolio icon"
           style={{ width: "38vw" }}
         />
-        <div id="context">
+        <div id="project-based">
           <h4>
             Project Based
             <br />
@@ -185,6 +189,29 @@ const HomePage = () => {
             management and build conceptual frameworks.
           </p>
         </div>
+      </Learning>
+      <Learning style={{ position: "relative", alignItems: "flex-start" }}>
+        <div id="peer-to-peer">
+          <h4>
+            Peer-to-peer
+            <br />
+            Learning
+          </h4>
+          <p>
+            Students are in charge of their own success and that of their
+            classmates.
+          </p>
+        </div>
+        <StaticImage
+          src="../images/learning-peer-to-peer.png"
+          alt="Peers talking illustration"
+          style={{
+            width: "56vw",
+            position: "absolute",
+            bottom: "6%",
+            right: "10%",
+          }}
+        />
       </Learning>
       <Section>
         <BigHighlight fontSize="9vw">
