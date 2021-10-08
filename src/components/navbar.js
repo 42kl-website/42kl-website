@@ -129,7 +129,7 @@ const Socials = styled.div`
 const links = [
   {
     title: "Home",
-    link: "/",
+    link: "/home",
   },
   {
     title: "About Us",
