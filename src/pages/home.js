@@ -75,7 +75,7 @@ const HomePage = () => {
   return (
     <LayoutHomePage>
       <StaticImage
-        src="../images/sample.jpg"
+        src="../images/iMacs-on-campus.png"
         alt="Home page background image"
         className="background"
       />
