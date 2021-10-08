@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
-import { Section } from "../style/common-styles";
 import Meteor from "../images/meteor.png";
 
 /* styles */
@@ -17,6 +16,13 @@ const Global = createGlobalStyle`
     background-color: black; //temporary
     color: white; //temporary
 	}
+`;
+
+const Section = styled.div`
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
 `;
 
 const Description = styled.div`
