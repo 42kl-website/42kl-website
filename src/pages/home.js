@@ -12,13 +12,8 @@ import "../style/index.css";
 /* styles */
 const WelcomeText = styled.div`
   position: absolute;
-  bottom: 24px;
-  left: 92px;
-
-  h1 {
-    font-size: 100px;
-    margin: 24px 0px;
-  }
+  bottom: 3%;
+  left: 5%;
 `;
 
 //"Extending Styles"
