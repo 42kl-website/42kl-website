@@ -5,10 +5,6 @@ import styled from "styled-components";
 import { Section, Highlight, BigHighlight } from "../style/common-styles";
 import "../style/index.css";
 
-/*
- ** Home page
- */
-
 /* styles */
 const WelcomeText = styled.div`
   position: absolute;
@@ -39,16 +35,27 @@ const Skills = styled(Section)`
 `;
 
 const Zero = styled.div`
-  width: 70%;
+  width: 100%;
   display: flex;
-  margin: 20px 0px;
 
-  #right {
+  h4 {
+    margin: 0;
+  }
+  .right {
     margin-left: auto;
     padding-bottom: 60px;
   }
-  #left {
+  .left {
     align-self: flex-end;
+  }
+  #classes {
+    margin-left: 5%;
+  }
+  #requirements {
+    margin-right: 10%;
+  }
+  #tuition {
+    margin-left: 12%;
   }
 `;
 
@@ -145,14 +152,20 @@ const HomePage = () => {
         </Beliefs>
       </Introduction>
       <Section direction="column">
-        <Zero>
-          <h4 id="left">CLASSES</h4>
-          <h4 id="right">REQUIREMENT</h4>
+        <Zero style={{ marginTop: "8%" }}>
+          <h4 class="left" id="classes">
+            CLASSES
+          </h4>
+          <h4 class="right" id="requirements">
+            REQUIREMENTS
+          </h4>
         </Zero>
         <BigHighlight fontSize="16vw">&lt;/ZERO&gt;</BigHighlight>
-        <Zero>
-          <h4 id="left">TUITION</h4>
-          <h4 id="right">TEACHER</h4>
+        <Zero style={{ marginBottom: "8%" }}>
+          <h4 class="left" id="tuition">
+            TUITION
+          </h4>
+          <h4 class="right">TEACHERS</h4>
         </Zero>
       </Section>
       <Learning>
