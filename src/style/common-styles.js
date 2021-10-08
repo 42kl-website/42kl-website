@@ -7,13 +7,11 @@ import styled from "styled-components";
 //Vertically: Aligned to center
 //Horizontally: flexed and aligned with space-between + Left/Right padding
 export const Section = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: ${(props) => props.direction || "row"}; //"Passed Props"
-  height: 100vh;
-  /* width: 100%; */
-  /* margin: 16px; */
+  justify-content: ${(props) => props.justify || "space-between"};
   align-items: center;
-  justify-content: space-between;
   padding: 0 10% 0 10%;
   padding-bottom: 60px; //To give space between each Figma Frame
 `;
