@@ -60,7 +60,6 @@ const Zero = styled.div`
 `;
 
 const Learning = styled(Section)`
-  padding-top: 10%;
   p {
     color: #00babc;
   }
@@ -71,6 +70,10 @@ const Learning = styled(Section)`
   #peer-to-peer {
     width: 26vw;
     padding-top: 10%;
+  }
+  #gamification {
+    text-align: center;
+    width: 36vw;
   }
 `;
 
@@ -172,7 +175,7 @@ const HomePage = () => {
           <h4 class="right">TEACHERS</h4>
         </Zero>
       </Section>
-      <Learning>
+      <Learning style={{ paddingTop: "10%" }}>
         <StaticImage
           src="../images/learning-project-based.png"
           alt="Portolio icon"
@@ -212,6 +215,22 @@ const HomePage = () => {
             right: "10%",
           }}
         />
+      </Learning>
+      <Learning
+        style={{ flexDirection: "column", justifyContent: "space-evenly" }}
+      >
+        <StaticImage
+          src="../images/learning-gamification.png"
+          alt="42 butterfly graph"
+          style={{ width: " 28vw" }}
+        />
+        <div id="gamification">
+          <h4>"Gamification"</h4>
+          <p>
+            Progress is accounted for using experience points through completion
+            of each project.
+          </p>
+        </div>
       </Learning>
       <Section>
         <BigHighlight fontSize="9vw">
