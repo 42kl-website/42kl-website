@@ -232,7 +232,7 @@ const HomePage = () => {
           </p>
         </div>
       </Learning>
-      <Section style={{ justifyContent: "center" }}>
+      <Section justify="center">
         <StaticImage
           src="../images/roadmap.png"
           alt="Roadmap of 42 program"
@@ -319,8 +319,15 @@ const HomePage = () => {
           style={{ width: "40vw" }}
         />
       </Skills>
-      <Section style={{ justifyContent: "center" }}>
+      <Section justify="center">
         <BigHighlight>&lt;/OUR NETWORK&gt;</BigHighlight>
+      </Section>
+      <Section justify="center">
+        <StaticImage
+          src="../images/networks.png"
+          alt="World map showing 42 global networks"
+          style={{ width: "76vw" }}
+        />
       </Section>
     </LayoutHomePage>
   );
