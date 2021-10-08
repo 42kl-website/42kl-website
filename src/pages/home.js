@@ -39,6 +39,10 @@ const Beliefs = styled.div`
 
 const Skills = styled(Section)`
   text-align: ${(props) => props.alignment || "left"};
+
+  h2 {
+    margin: 0;
+  }
 `;
 
 const Zero = styled.div`
@@ -145,7 +149,7 @@ const HomePage = () => {
       <Learning>
         <StaticImage
           src="../images/learning-project-based.png"
-          alt="Project based learning"
+          alt="Portolio icon"
           style={{ width: "38vw" }}
         />
         <div id="context">
@@ -188,10 +192,18 @@ const HomePage = () => {
             <Highlight>Front-end Design</Highlight>
           </h5>
         </div>
-        <StaticImage src="../images/skills-tech.png" width={850} />
+        <StaticImage
+          src="../images/skills-tech.png"
+          atl="Editors modifying a website"
+          style={{ width: "45vw" }}
+        />
       </Skills>
       <Skills alignment="center">
-        <StaticImage src="../images/skills-soft.png" width={700} />
+        <StaticImage
+          src="../images/skills-soft.png"
+          atl="People of various professions on a stage"
+          style={{ width: "30vw" }}
+        />
         <div>
           <h2>Soft Skills</h2>
           <h5>
@@ -226,7 +238,11 @@ const HomePage = () => {
             <Highlight>Industry Challenges</Highlight>
           </h5>
         </div>
-        <StaticImage src="../images/skills-right-fit.png" width={700} />
+        <StaticImage
+          src="../images/skills-right-fit.png"
+          atl="Workers in a discussion"
+          style={{ width: "40vw" }}
+        />
       </Skills>
       <Section style={{ justifyContent: "center" }}>
         <BigHighlight>&lt;/OUR NETWORK&gt;</BigHighlight>

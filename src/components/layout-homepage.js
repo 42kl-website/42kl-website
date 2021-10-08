@@ -44,12 +44,11 @@ const Children = styled.main`
   }
   h4 {
     font-size: 3vw;
-    font-weight: bold;
     margin: 2vw 0;
   }
   h5 {
     font-size: 2vw;
-    line-height: 4vw;
+    line-height: 4.5vw;
   }
   p {
     font-size: 1.5vw;
