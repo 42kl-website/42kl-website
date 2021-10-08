@@ -232,6 +232,13 @@ const HomePage = () => {
           </p>
         </div>
       </Learning>
+      <Section style={{ justifyContent: "center" }}>
+        <StaticImage
+          src="../images/roadmap.png"
+          alt="Roadmap of 42 program"
+          style={{ width: "66vw" }}
+        />
+      </Section>
       <Section>
         <BigHighlight fontSize="9vw">
           &lt;/WORK
