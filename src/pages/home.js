@@ -23,13 +23,9 @@ const WelcomeText = styled.div`
 
 //"Extending Styles"
 const Introduction = styled(Section)`
-  h2 {
-    font-size: 80px;
-  }
   p {
-    padding-left: 40px;
-    width: 500px;
-    font-size: 1.5em;
+    padding-left: 4.5vw;
+    width: 38vw;
   }
 `;
 
@@ -42,15 +38,7 @@ const Beliefs = styled.div`
 `;
 
 const Skills = styled(Section)`
-text-align: ${props => props.alignment || "left"};
-  h2 {
-    font-size: 120px;
-  }
-  p {
-    width: auto;
-    font-size: 2.2em;
-    line-height: 1.8;
-  }
+  text-align: ${(props) => props.alignment || "left"};
 `;
 
 const Zero = styled.div`
@@ -58,10 +46,6 @@ const Zero = styled.div`
   display: flex;
   margin: 20px 0px;
 
-  p {
-    font-size: 2.5em;
-    font-weight: bold;
-  }
   #right {
     margin-left: auto;
     padding-bottom: 60px;
@@ -77,12 +61,7 @@ const Learning = styled(Section)`
     text-align: right;
     width: 28vw;
   }
-  h2 {
-    font-size: 3vw;
-    font-weight: bold;
-  }
   p {
-    font-size: 1.5vw;
     color: #00babc;
   }
 `;
@@ -97,12 +76,15 @@ const HomePage = () => {
         className="background"
       />
       <WelcomeText>
-        <h1>&lt;/Welcome to</h1>
-        <h1>42 Kuala Lumpur&gt;</h1>
+        <h1>
+          &lt;/Welcome to
+          <br />
+          42 Kuala Lumpur&gt;
+        </h1>
       </WelcomeText>
       <Introduction>
-        <div style={{marginRight:"60px"}}>
-          <h2>42KL</h2>
+        <div style={{ marginRight: "60px" }}>
+          <h3>42KL</h3>
           <p>
             42 KL offers an{" "}
             <Highlight>unparalleled computing education opportunity</Highlight>{" "}
@@ -127,38 +109,37 @@ const HomePage = () => {
             src="../images/beliefs-creativity.png"
             alt="Belief in creativity and passion"
             width={150}
-            style={{ position: "absolute", top:"10%", right: "0px" }}
+            style={{ position: "absolute", top: "10%", right: "0px" }}
           />
           <StaticImage
             src="../images/beliefs-equal-opportunities.png"
             alt="Belief in equal opportunities"
             width={150}
-            style={{ position: "absolute", top:"35%", left:"30%"}}
+            style={{ position: "absolute", top: "35%", left: "30%" }}
           />
           <StaticImage
             src="../images/beliefs-excellence.png"
             alt="Belief in pursuit of excellence"
             width={150}
-            style={{ position: "absolute", bottom:"0px", right: "0px" }}
+            style={{ position: "absolute", bottom: "0px", right: "0px" }}
           />
           <StaticImage
             src="../images/beliefs-innovative.png"
             alt="Belief in innovative and questioning"
             width={120}
-            style={{ position: "absolute", bottom:"10%", left:"0px" }}
-
+            style={{ position: "absolute", bottom: "10%", left: "0px" }}
           />
         </Beliefs>
       </Introduction>
       <Section direction="column">
         <Zero>
-          <p id="left">CLASSES</p>
-          <p id="right">REQUIREMENT</p>
+          <h4 id="left">CLASSES</h4>
+          <h4 id="right">REQUIREMENT</h4>
         </Zero>
-        <BigHighlight fontSize="13em">&lt;/ZERO&gt;</BigHighlight>
+        <BigHighlight fontSize="16vw">&lt;/ZERO&gt;</BigHighlight>
         <Zero>
-          <p id="left">TUITION</p>
-          <p id="right">TEACHER</p>
+          <h4 id="left">TUITION</h4>
+          <h4 id="right">TEACHER</h4>
         </Zero>
       </Section>
       <Learning>
@@ -168,11 +149,11 @@ const HomePage = () => {
           style={{ width: "38vw" }}
         />
         <div id="context">
-          <h2>
+          <h4>
             Project Based
             <br />
             Learning
-          </h2>
+          </h4>
           <p>
             Imitates real-world work and encourages student to learn time
             management and build conceptual frameworks.
@@ -180,20 +161,18 @@ const HomePage = () => {
         </div>
       </Learning>
       <Section>
-        <div style={{ position: "absolute", left: "10%" }}>
-          <BigHighlight>
-            &lt;/WORLD
-            <br />
-            READY
-            <br />
-            TALENT&gt;
-          </BigHighlight>
-        </div>
+        <BigHighlight fontSize="9vw">
+          &lt;/WORK
+          <br />
+          READY
+          <br />
+          TALENT&gt;
+        </BigHighlight>
       </Section>
       <Skills>
         <div>
           <h2>Tech Skills</h2>
-          <p>
+          <h5>
             <Highlight>Blockchain</Highlight>
             <br />
             <Highlight>Cyber Security</Highlight>
@@ -207,15 +186,15 @@ const HomePage = () => {
             <Highlight>Artificial Intelligence</Highlight>
             <br />
             <Highlight>Front-end Design</Highlight>
-          </p>
+          </h5>
         </div>
         <StaticImage src="../images/skills-tech.png" width={850} />
       </Skills>
       <Skills alignment="center">
         <StaticImage src="../images/skills-soft.png" width={700} />
-        <div style={{ padding: `10em` }}>
+        <div>
           <h2>Soft Skills</h2>
-          <p>
+          <h5>
             <Highlight>Behavioral</Highlight>
             <br />
             <Highlight>Mindset</Highlight>
@@ -227,13 +206,13 @@ const HomePage = () => {
             <Highlight>Leadership</Highlight>
             <br />
             <Highlight>Learnability</Highlight>
-          </p>
+          </h5>
         </div>
       </Skills>
       <Skills>
-        <div style={{ padding: `10em` }}>
+        <div>
           <h2>Right Fit</h2>
-          <p>
+          <h5>
             <Highlight>Site Visits</Highlight>
             <br />
             <Highlight>Work Simulations</Highlight>
@@ -245,11 +224,11 @@ const HomePage = () => {
             <Highlight>Informal Meetings</Highlight>
             <br />
             <Highlight>Industry Challenges</Highlight>
-          </p>
+          </h5>
         </div>
         <StaticImage src="../images/skills-right-fit.png" width={700} />
       </Skills>
-      <Section>
+      <Section style={{ justifyContent: "center" }}>
         <BigHighlight>&lt;/OUR NETWORK&gt;</BigHighlight>
       </Section>
     </LayoutHomePage>

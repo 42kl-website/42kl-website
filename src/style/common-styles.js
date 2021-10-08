@@ -27,9 +27,9 @@ export const Highlight = styled.span`
   color: white;
 `;
 
-export const BigHighlight = styled.p`
+export const BigHighlight = styled.h1`
   margin: 0px;
-  font-size: ${(props) => props.fontSize || "10em"};
+  font-size: ${(props) => props.fontSize || "8vw"} !important;
   user-select: none;
   font-weight: bold;
   background: #00babc;
