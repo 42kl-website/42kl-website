@@ -31,10 +31,8 @@ const Introduction = styled(Section)`
 
 const Beliefs = styled.div`
   position: relative;
-  height: 70%;
-  min-width: 400px;
-  width: 420px;
-  margin: auto 40px;
+  height: 100vh;
+  width: 33vw;
 `;
 
 const Skills = styled(Section)`
@@ -105,33 +103,49 @@ const HomePage = () => {
         </div>
         <Beliefs>
           <StaticImage
-            src="../images/beliefs-community.png"
-            alt="Belief in commitment to community"
-            width={150}
-          />
-          <StaticImage
-            src="../images/beliefs-creativity.png"
-            alt="Belief in creativity and passion"
-            width={150}
-            style={{ position: "absolute", top: "10%", right: "0px" }}
-          />
-          <StaticImage
-            src="../images/beliefs-equal-opportunities.png"
-            alt="Belief in equal opportunities"
-            width={150}
-            style={{ position: "absolute", top: "35%", left: "30%" }}
-          />
-          <StaticImage
             src="../images/beliefs-excellence.png"
             alt="Belief in pursuit of excellence"
-            width={150}
-            style={{ position: "absolute", bottom: "0px", right: "0px" }}
+            style={{ width: "10vw", position: "absolute", top: "17%" }}
           />
           <StaticImage
             src="../images/beliefs-innovative.png"
             alt="Belief in innovative and questioning"
-            width={120}
-            style={{ position: "absolute", bottom: "10%", left: "0px" }}
+            style={{
+              width: "9vw",
+              position: "absolute",
+              top: "30%",
+              right: "5%",
+            }}
+          />
+          <StaticImage
+            src="../images/beliefs-creativity.png"
+            alt="Belief in creativity and passion"
+            style={{
+              width: "10vw",
+              position: "absolute",
+              top: "50%",
+              left: "31%",
+            }}
+          />
+          <StaticImage
+            src="../images/beliefs-community.png"
+            alt="Belief in commitment to community"
+            style={{
+              width: "9vw",
+              position: "absolute",
+              bottom: "7%",
+              left: "0px",
+            }}
+          />
+          <StaticImage
+            src="../images/beliefs-equal-opportunities.png"
+            alt="Belief in equal opportunities"
+            style={{
+              width: "12vw",
+              position: "absolute",
+              bottom: "0px",
+              right: "0px",
+            }}
           />
         </Beliefs>
       </Introduction>
