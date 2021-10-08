@@ -62,13 +62,7 @@ const IndexPage = () => {
     <>
       <Global />
       <Section>
-        {/* <StaticImage
-          src="../images/logo-fortytwo-white.png"
-          alt="Logo as the number 42"
-          width={1000}
-        /> */}
-        <svg
-          // width="1241" height="860"
+        <svg // original svg size: width="1241" height="860"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
           style={{ position: "absolute" }}

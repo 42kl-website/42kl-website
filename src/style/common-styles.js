@@ -11,7 +11,7 @@ export const Section = styled.div`
   flex-direction: ${(props) => props.direction || "row"}; //"Passed Props"
   height: 100vh;
   /* width: 100%; */
-  margin: 16px;
+  /* margin: 16px; */
   align-items: center;
   justify-content: space-between;
   padding: 0 10% 0 10%;
