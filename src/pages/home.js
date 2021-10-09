@@ -7,11 +7,14 @@ import "../style/index.css";
 
 /* styles */
 const Welcome = styled.div`
-  .text {
-    position: absolute;
-    bottom: 3%;
-    left: 5%;
-  }
+  position: relative;
+`;
+
+//Used on Text over an image background
+const OverImageText = styled.div`
+  position: absolute;
+  bottom: 3%;
+  left: 5%;
 `;
 
 //"Extending Styles"
@@ -79,6 +82,9 @@ const Learning = styled(Section)`
   }
 `;
 
+const Campus = styled.div`
+  position: relative;
+`;
 //markup
 const HomePage = () => {
   return (
@@ -87,16 +93,16 @@ const HomePage = () => {
         <StaticImage
           src="../images/iMacs-on-campus.png"
           alt="iMacs on 42KL campus"
-          style={{ position: "relative", height: "100vh" }}
+          style={{ height: "100vh" }}
           imgStyle={{ objectPosition: "center bottom" }}
         />
-        <div className="text">
+        <OverImageText>
           <h1>
             &lt;/Welcome to
             <br />
             42 Kuala Lumpur&gt;
           </h1>
-        </div>
+        </OverImageText>
       </Welcome>
       <Introduction>
         <div style={{ marginRight: "60px" }}>
@@ -334,6 +340,17 @@ const HomePage = () => {
           style={{ width: "76vw" }}
         />
       </Section>
+      <Campus>
+        <StaticImage
+          src="../images/campus-building.png"
+          alt="42KL building"
+          style={{ width: "100vw", height: "100vh" }}
+          imgStyle={{ objectPosition: "10% 35%" }}
+        />
+        <OverImageText>
+          <h2>Our Campus</h2>
+        </OverImageText>
+      </Campus>
     </LayoutHomePage>
   );
 };
