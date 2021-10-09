@@ -6,10 +6,12 @@ import { Section, Highlight, BigHighlight } from "../style/common-styles";
 import "../style/index.css";
 
 /* styles */
-const WelcomeText = styled.div`
-  position: absolute;
-  bottom: 3%;
-  left: 5%;
+const Welcome = styled.div`
+  .text {
+    position: absolute;
+    bottom: 3%;
+    left: 5%;
+  }
 `;
 
 //"Extending Styles"
@@ -81,19 +83,21 @@ const Learning = styled(Section)`
 const HomePage = () => {
   return (
     <LayoutHomePage>
-      <StaticImage
-        src="../images/iMacs-on-campus.png"
-        alt="iMacs on 42KL campus"
-        style={{ position: "relative", height: "100vh" }}
-        imgStyle={{ objectPosition: "center bottom" }}
-      />
-      <WelcomeText>
-        <h1>
-          &lt;/Welcome to
-          <br />
-          42 Kuala Lumpur&gt;
-        </h1>
-      </WelcomeText>
+      <Welcome>
+        <StaticImage
+          src="../images/iMacs-on-campus.png"
+          alt="iMacs on 42KL campus"
+          style={{ position: "relative", height: "100vh" }}
+          imgStyle={{ objectPosition: "center bottom" }}
+        />
+        <div className="text">
+          <h1>
+            &lt;/Welcome to
+            <br />
+            42 Kuala Lumpur&gt;
+          </h1>
+        </div>
+      </Welcome>
       <Introduction>
         <div style={{ marginRight: "60px" }}>
           <h3>42KL</h3>
