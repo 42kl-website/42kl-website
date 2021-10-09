@@ -2,8 +2,13 @@ import * as React from "react";
 import LayoutHomePage from "../components/layout-homepage";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Section, Highlight, BigHighlight } from "../style/common-styles";
-import "../style/index.css";
+import {
+  Section,
+  Highlight,
+  BigHighlight,
+  RectangularButton,
+} from "../style/common-styles";
+// import "../style/index.css"; //Unused
 
 /* styles */
 const Welcome = styled.div`
@@ -13,8 +18,18 @@ const Welcome = styled.div`
 //Used on Text over an image background
 const OverImageText = styled.div`
   position: absolute;
-  bottom: 3%;
+  bottom: 13%;
   left: 5%;
+
+  h1 {
+    margin: 0;
+  }
+  h2 {
+    margin: 0;
+  }
+  h3 {
+    margin: 0;
+  }
 `;
 
 //"Extending Styles"
@@ -85,6 +100,13 @@ const Learning = styled(Section)`
 const Campus = styled.div`
   position: relative;
 `;
+
+const Options = styled.div`
+  width: 40vw;
+  display: flex;
+  justify-content: space-between;
+`;
+
 //markup
 const HomePage = () => {
   return (
@@ -349,6 +371,21 @@ const HomePage = () => {
         />
         <OverImageText>
           <h2>Our Campus</h2>
+        </OverImageText>
+      </Campus>
+      <Campus>
+        <StaticImage
+          src="../images/campus-building.png"
+          alt="42KL building"
+          style={{ width: "100vw", height: "100vh" }}
+          imgStyle={{ objectPosition: "10% 35%" }}
+        />
+        <OverImageText>
+          <h3 style={{ marginBottom: "3%" }}>BE PART OF US NOW</h3>
+          <Options>
+            <RectangularButton to="#">TRY IT OUT</RectangularButton>
+            <RectangularButton to="#">OF COURSE!</RectangularButton>
+          </Options>
         </OverImageText>
       </Campus>
     </LayoutHomePage>

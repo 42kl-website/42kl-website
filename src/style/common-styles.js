@@ -1,3 +1,5 @@
+import * as React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 /*
@@ -49,4 +51,16 @@ export const BigHighlight = styled.h1`
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+`;
+
+export const RectangularButton = styled((props) => <Link {...props} />)`
+  display: flex;
+  align-items: center;
+  border: 6px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to bottom, #00babc, #3d5aae);
+  padding: 1% 6%;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2vw;
 `;
