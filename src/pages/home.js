@@ -83,8 +83,9 @@ const HomePage = () => {
     <LayoutHomePage>
       <StaticImage
         src="../images/iMacs-on-campus.png"
-        alt="Home page background image"
-        className="background"
+        alt="iMacs on 42KL campus"
+        style={{ position: "relative", height: "100vh" }}
+        imgStyle={{ objectPosition: "center bottom" }}
       />
       <WelcomeText>
         <h1>
