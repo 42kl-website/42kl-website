@@ -13,7 +13,7 @@ export const Section = styled.div`
   justify-content: ${(props) => props.justify || "space-between"};
   align-items: center;
   padding: 0 10% 0 10%;
-  padding-bottom: 60px; //To give space between each Figma Frame
+  margin-bottom: 60px; //To give space between each Figma Frame
 `;
 
 export const Highlight = styled.span`
