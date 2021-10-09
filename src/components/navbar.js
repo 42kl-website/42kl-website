@@ -97,17 +97,20 @@ const SidebarLinks = styled.nav`
     sidebar ? "translateX(0)" : "translateX(100%)"};
   z-index: 1;
   ul {
-    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70vh;
     margin: 0;
-    padding: 120px 48px 0px 48px;
+    padding: 13vh 3vw 0 3vw;
+    list-style: none;
   }
   a {
     color: #fff;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.4vw;
     font-weight: 600;
     transition: color 100ms;
-    padding: 16px 0px;
     display: block;
 
     :hover {
@@ -117,10 +120,10 @@ const SidebarLinks = styled.nav`
 `;
 
 const Socials = styled.div`
-  padding: 0px 48px 24px 48px;
+  padding: 0px 3vw 2vh 3vw;
 
   a {
-    margin-left: 8px;
+    margin-left: 1vw;
     display: inline;
   }
 `;
