@@ -8,6 +8,9 @@ import {
   BigHighlight,
   RectangularButton,
 } from "../style/common-styles";
+import { useRef, useEffect } from "react";
+import useSelector from "../hooks/useSelector";
+import FadeIn from "../animations/FadeIn";
 // import "../style/index.css"; //Unused
 
 /* styles */
@@ -109,6 +112,7 @@ const Options = styled.div`
 
 //markup
 const HomePage = () => {
+  
   return (
     <LayoutHomePage>
       <Welcome>
@@ -126,10 +130,11 @@ const HomePage = () => {
           </h1>
         </OverImageText>
       </Welcome>
-      <Introduction>
+      <FadeIn vars={{ x:200 }}> {/* fade in animation from right */}
+      <Introduction className="container">
         <div style={{ marginRight: "60px" }}>
-          <h3>42KL</h3>
-          <p>
+          <h3 className="fade-in">42KL</h3>
+          <p className="fade-in">
             42 KL offers an{" "}
             <Highlight>unparalleled computing education opportunity</Highlight>{" "}
             to any Malaysian, regardless of socioeconomic and educational
@@ -143,11 +148,15 @@ const HomePage = () => {
             Malaysia.
           </p>
         </div>
-        <Beliefs>
+        <Beliefs className="fade-in">
           <StaticImage
             src="../images/beliefs-excellence.png"
             alt="Belief in pursuit of excellence"
-            style={{ width: "10vw", position: "absolute", top: "17%" }}
+            style={{ 
+              width: "10vw",
+              position: "absolute",
+              top: "17%" 
+            }}
           />
           <StaticImage
             src="../images/beliefs-innovative.png"
@@ -191,8 +200,10 @@ const HomePage = () => {
           />
         </Beliefs>
       </Introduction>
-      <Section direction="column">
-        <Zero style={{ marginTop: "8%" }}>
+      </FadeIn>
+      <FadeIn vars={{ x:-200 }}> {/* fade in animation from left */}
+      <Section className="container" direction="column">
+        <Zero className="fade-in" style={{ marginTop: "8%" }}>
           <h4 class="left" id="classes">
             CLASSES
           </h4>
@@ -200,14 +211,15 @@ const HomePage = () => {
             REQUIREMENTS
           </h4>
         </Zero>
-        <BigHighlight fontSize="16vw">&lt;/ZERO&gt;</BigHighlight>
-        <Zero style={{ marginBottom: "8%" }}>
+        <BigHighlight className="fade-in" fontSize="16vw">&lt;/ZERO&gt;</BigHighlight>
+        <Zero className="fade-in" style={{ marginBottom: "8%" }}>
           <h4 class="left" id="tuition">
             TUITION
           </h4>
           <h4 class="right">TEACHERS</h4>
         </Zero>
       </Section>
+      </FadeIn>
       <Learning style={{ paddingTop: "10%" }}>
         <StaticImage
           src="../images/learning-project-based.png"
@@ -272,8 +284,9 @@ const HomePage = () => {
           style={{ width: "66vw" }}
         />
       </Section>
-      <Section>
-        <BigHighlight fontSize="9vw">
+      <FadeIn vars={{ x:-200 }}>
+      <Section className="container">
+        <BigHighlight className="fade-in" fontSize="9vw">
           &lt;/WORK
           <br />
           READY
@@ -281,6 +294,7 @@ const HomePage = () => {
           TALENT&gt;
         </BigHighlight>
       </Section>
+      </FadeIn>
       <Skills>
         <div>
           <h2>Tech Skills</h2>
@@ -352,9 +366,11 @@ const HomePage = () => {
           style={{ width: "40vw" }}
         />
       </Skills>
-      <Section justify="center">
-        <BigHighlight>&lt;/OUR NETWORK&gt;</BigHighlight>
+      <FadeIn vars={{ x:200 }}>
+      <Section className="container" justify="center">
+        <BigHighlight className="fade-in">&lt;/OUR NETWORK&gt;</BigHighlight>
       </Section>
+      </FadeIn>
       <Section justify="center">
         <StaticImage
           src="../images/networks.png"
