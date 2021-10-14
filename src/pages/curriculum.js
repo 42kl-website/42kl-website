@@ -25,8 +25,6 @@ const Container = styled.div`
   height: 100vh;
   border-style: solid;
   border-color: #fff;
-  object-fit: contain;
-  object-position: 50% 50%;
 `;
 const Curriculum = () => {
   return (
@@ -36,16 +34,17 @@ const Curriculum = () => {
         ISAAC!!!
       </Section>
       <Container>
-        <StaticImage
-          src="../images/iMacs-on-campus.png"
+        <svg
+          // fill="none"
+          width="50vw"
+          viewBox="0 0 60 60"
           style={{
-            height: "100vh",
+            border: "1px solid #FFF",
           }}
-          imgStyle={{
-            objectFit: "cover",
-            objectPosition: "center bottom",
-          }}
-        />
+          // preserveAspectRatio="xMaxYMax meet"
+        >
+          <circle cx="30" cy="30" r="20" fill="#DEC4A8" />
+        </svg>
       </Container>
     </LayoutHomePage>
   );
