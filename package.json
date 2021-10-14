@@ -23,7 +23,7 @@
     "gatsby-plugin-styled-components": "^4.13.0",
     "gatsby-source-filesystem": "^3.13.0",
     "gatsby-transformer-sharp": "^3.13.0",
-    "gsap": "npm:@gsap/member@^3.8.0",
+    "gsap": "^3.8.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-icons": "^4.1.0",
