@@ -22,7 +22,9 @@ export const query = graphql`
       edges {
         node {
           question
-
+          answer {
+            raw
+          }
         }
       }
     }
