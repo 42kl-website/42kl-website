@@ -8,14 +8,14 @@ import {
   BigHighlight,
   RectangularButton,
 } from "../style/common-styles";
-import { useRef, useEffect } from "react";
-import useSelector from "../hooks/useSelector";
-import FadeIn from "../animations/FadeIn";
+// import FadeIn from "../animations/FadeIn";
+import LayerPin from "../animations/LayerPin";
 // import "../style/index.css"; //Unused
 
 /* styles */
 const Welcome = styled.div`
   position: relative;
+  height: 100vh;
 `;
 
 //Used on Text over an image background
@@ -27,16 +27,13 @@ const OverImageText = styled.div`
   h1 {
     margin: 0;
   }
-  h2 {
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
 `;
 
 //"Extending Styles"
 const Introduction = styled(Section)`
+  section {
+    background-color: black;
+  }
   p {
     padding-left: 4.5vw;
     width: 38vw;
@@ -45,8 +42,8 @@ const Introduction = styled(Section)`
 
 const Beliefs = styled.div`
   position: relative;
-  height: 100vh;
-  width: 33vw;
+  height: 80vh;
+  width: 50%;
 `;
 
 const Skills = styled(Section)`
@@ -115,23 +112,25 @@ const HomePage = () => {
   
   return (
     <LayoutHomePage>
-      <Welcome>
+      <LayerPin>
+      <Welcome className="welcome-container">
         <StaticImage
           src="../images/iMacs-on-campus.png"
           alt="iMacs on 42KL campus"
           style={{ height: "100vh" }}
-          imgStyle={{ objectPosition: "center bottom" }}
+          imgStyle={{ objectPosition: "center center" }}
+          class="parallax1" 
         />
         <OverImageText>
-          <h1>
+          <h1 class="parallax2">
             &lt;/Welcome to
             <br />
             42 Kuala Lumpur&gt;
           </h1>
         </OverImageText>
       </Welcome>
-      <FadeIn vars={{ x:200 }}> {/* fade in animation from right */}
-      <Introduction className="container">
+      {/* <FadeIn vars={{ x:200 }}> fade in animation from right */}
+      <Introduction className="fixed-section-content">
         <div style={{ marginRight: "60px" }}>
           <h3 className="fade-in">42KL</h3>
           <p className="fade-in">
@@ -200,9 +199,9 @@ const HomePage = () => {
           />
         </Beliefs>
       </Introduction>
-      </FadeIn>
-      <FadeIn vars={{ x:-200 }}> {/* fade in animation from left */}
-      <Section className="container" direction="column">
+      {/* </FadeIn> */}
+      {/* <FadeIn vars={{ x:-200 }}> fade in animation from left */}
+      <Section className="container fixed-section-content" direction="column">
         <Zero className="fade-in" style={{ marginTop: "8%" }}>
           <h4 class="left" id="classes">
             CLASSES
@@ -219,14 +218,15 @@ const HomePage = () => {
           <h4 class="right">TEACHERS</h4>
         </Zero>
       </Section>
-      </FadeIn>
-      <Learning style={{ paddingTop: "10%" }}>
+      {/* </FadeIn> */}
+      <Learning className="fixed-section-content" style={{ paddingTop: "10%" }}>
         <StaticImage
           src="../images/learning-project-based.png"
           alt="Portolio icon"
           style={{ width: "38vw" }}
+          class="fade-in"
         />
-        <div id="project-based">
+        <div id="project-based" class="fade-in">
           <h4>
             Project Based
             <br />
@@ -238,8 +238,8 @@ const HomePage = () => {
           </p>
         </div>
       </Learning>
-      <Learning style={{ position: "relative", alignItems: "flex-start" }}>
-        <div id="peer-to-peer">
+      <Learning className="fixed-section-content" style={{ position: "relative", alignItems: "flex-start" }}>
+        <div id="peer-to-peer" class="fade-in">
           <h4>
             Peer-to-peer
             <br />
@@ -259,17 +259,19 @@ const HomePage = () => {
             bottom: "6%",
             right: "10%",
           }}
+          class="fade-in"
         />
       </Learning>
-      <Learning
+      <Learning className="fixed-section-content" 
         style={{ flexDirection: "column", justifyContent: "space-evenly" }}
       >
         <StaticImage
           src="../images/learning-gamification.png"
           alt="42 butterfly graph"
           style={{ width: " 28vw" }}
+          class="fade-in"
         />
-        <div id="gamification">
+        <div id="gamification" class="fade-in">
           <h4>"Gamification"</h4>
           <p>
             Progress is accounted for using experience points through completion
@@ -277,15 +279,16 @@ const HomePage = () => {
           </p>
         </div>
       </Learning>
-      <Section justify="center">
+      <Section justify="center" className="fixed-section-content">
         <StaticImage
           src="../images/roadmap.png"
           alt="Roadmap of 42 program"
           style={{ width: "66vw" }}
+          class="fade-in"
         />
       </Section>
-      <FadeIn vars={{ x:-200 }}>
-      <Section className="container">
+      {/* <FadeIn vars={{ x:-200 }}> */}
+      <Section className="container fixed-section-content">
         <BigHighlight className="fade-in" fontSize="9vw">
           &lt;/WORK
           <br />
@@ -294,8 +297,8 @@ const HomePage = () => {
           TALENT&gt;
         </BigHighlight>
       </Section>
-      </FadeIn>
-      <Skills>
+      {/* </FadeIn> */}
+      <Skills className="fixed-section-content" >
         <div>
           <h2>Tech Skills</h2>
           <h5>
@@ -320,7 +323,7 @@ const HomePage = () => {
           style={{ width: "45vw" }}
         />
       </Skills>
-      <Skills alignment="center">
+      <Skills className="fixed-section-content" alignment="center">
         <StaticImage
           src="../images/skills-soft.png"
           atl="People of various professions on a stage"
@@ -366,11 +369,11 @@ const HomePage = () => {
           style={{ width: "40vw" }}
         />
       </Skills>
-      <FadeIn vars={{ x:200 }}>
-      <Section className="container" justify="center">
+      {/* <FadeIn vars={{ x:200 }}> */}
+      <Section className="fixed-section-content" justify="center">
         <BigHighlight className="fade-in">&lt;/OUR NETWORK&gt;</BigHighlight>
       </Section>
-      </FadeIn>
+      {/* </FadeIn> */}
       <Section justify="center">
         <StaticImage
           src="../images/networks.png"
@@ -404,6 +407,7 @@ const HomePage = () => {
           </Options>
         </OverImageText>
       </Campus>
+      </LayerPin>
     </LayoutHomePage>
   );
 };

@@ -14,21 +14,22 @@ const FadeIn = ({ children, vars }) => {
 
   const [q, ref] = useSelector();
 
-  useLayoutEffect(() => {
-    gsap.from(q(".fade-in"), {
-      scrollTrigger: {
-        trigger: q(".container"),
-        start: "top bottom-=200",
-        end: "+=500",
-        scrub: 2,
-      },
-      opacity: 0,
-      stagger: 0.5,
-      ...vars,
-    });
-  }, []);
+  // useLayoutEffect(() => {
+  //   gsap.from(q(".fade-in"), {
+  //     scrollTrigger: {
+  //       trigger: ref.current,
+  //       start: "top 80%",
+  //       end: "bottom 80%",
+  //       scrub: 2,
+  //       markers:true,
+  //     },
+  //     opacity: 0,
+  //     stagger: 0.5,
+  //     ...vars,
+  //   });
+  // }, []);
 
-  return <span ref={ref}>{ children }</span>;
+  return <div ref={ref}>{ children }</div>;
 }
 
 export default FadeIn;
